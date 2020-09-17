@@ -15,12 +15,14 @@ npm install --save @voomsway/react-table
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from '@voomsway/react-table'
+import {DataTable, Padding} from '@voomsway/react-table'
 import '@voomsway/react-table/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <Padding horizontal={20} vertical={20}>
+      <DataTable columns={columns} dataSource={dataSource} minColumns={minColumns} maxColumns={maxColumns} pagination={pagination} onPaginationChange={onPaginationChange} pageRenderOrder={pageRenderOrder} onRenderOrderChange={onRenderOrderChange}>
+    </Padding>
   }
 }
 ```
