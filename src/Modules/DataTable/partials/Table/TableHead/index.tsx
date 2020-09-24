@@ -31,7 +31,16 @@ export default (props: TableHeadProps) => {
   return (
     <motion.thead className={"___table-header"} transition={{type: 'inertia'}}>
       <tr className={"___table-columns"}>
-        <th
+        <motion.th
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{
+            type: "spring",
+            delay:  0.1,
+            stiffness: 100,
+            damping: 13,
+          }}
           className={"___table-column"}
           style={{
             width: "64px",
@@ -44,16 +53,16 @@ export default (props: TableHeadProps) => {
               checked={checkState.checkAll}
             />
           </div>
-        </th>
+        </motion.th>
         {columns.selected.map((value, index) => {
           return (
             <motion.th
-              initial={{ y: 50 }}
-              animate={{ y: 0 }}
-              exit={{ y: 50 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
               transition={{
                 type: "spring",
-                delay: (index ?? 1) * 0.02,
+                delay: ((index ?? 1) + 1) * 0.1,
                 stiffness: 100,
                 damping: 13,
               }}
@@ -69,7 +78,16 @@ export default (props: TableHeadProps) => {
             </motion.th>
           );
         })}
-        <th
+        <motion.th
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{
+            type: "spring",
+            delay: (columns.selected.length || 1) * 0.1,
+            stiffness: 100,
+            damping: 13,
+          }}
           className={"___table-column selectable-columns"}
           style={{
             width: 64,
@@ -111,7 +129,7 @@ export default (props: TableHeadProps) => {
               </Tooltip>
             </Popover>
           </motion.div>
-        </th>
+        </motion.th>
       </tr>
     </motion.thead>
   );

@@ -55,7 +55,8 @@ export const ambientTheme = {
   'input-number-handler-border-color': 'var(--text-color)',
   'sbmenu-border': 'var(--background-secondary)',
   'draggable-background-1': 'var(--background-primary)',
-  'draggable-background-2': 'var(--background-secondary)'
+  'draggable-background-2': 'var(--background-secondary)',
+  'checkbox-disabled': 'rgba(0, 0, 0, 0.25)'
 };
 
 export const defaultTheme = {
@@ -84,7 +85,7 @@ export const defaultTheme = {
   'icon-color': 'inherit',
   'icon-color-hover': 'rgba(0, 0, 0, 0.75)',
   'heading-color': 'rgba(0, 0, 0, 0.85)',
-  'menu-item-active-bg': '#f5f0ff',
+  'menu-item-active-bg': '#f0f8ff',
   'message-text-color': 'var(--text-color)',
   'notification-bg': 'var(--background-primary)',
   'popover-background': 'var(--background-primary)',
@@ -115,5 +116,6 @@ export const defaultTheme = {
   'input-number-handler-border-color': 'var(--border-color-base)',
   'sbmenu-border': 'var(--border)',
   'draggable-background-1': 'var(--background-secondary)',
-  'draggable-background-2': 'var(--background-primary)'
+  'draggable-background-2': 'var(--background-primary)',
+  'checkbox-disabled': 'rgba(78, 93, 106,.45)'
 };

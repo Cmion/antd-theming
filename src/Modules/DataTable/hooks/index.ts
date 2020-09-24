@@ -72,3 +72,32 @@ export let toPercentage = (
   sub: number = 0,
   add: number = 0
 ): number => size * expectedRatio - sub + add;
+
+export const useFixedTableHeader = () => {
+  useEffect(() => {
+    const scrollEffect = () => {
+      const tableWrapper = document.querySelector(
+        ".ReactTable___table-wrapper"
+      );
+      const fixedTable = document.querySelector(".ReactTable___table-fixed");
+
+      const spaceFromTop = tableWrapper?.getBoundingClientRect?.()?.top;
+      if ((spaceFromTop || 0) <= -1 && fixedTable) {
+        // @ts-ignore
+        fixedTable.style.display = "table";
+        // @ts-ignore
+        fixedTable.style.top = "0";
+        // @ts-ignore
+        fixedTable.style.position = "fixed";
+      } else {
+        if (fixedTable) {
+          // @ts-ignore
+          fixedTable.style.display = "none";
+        }
+      }
+    };
+    window.addEventListener("scroll", scrollEffect);
+
+    return () => window.removeEventListener("scroll", scrollEffect);
+  });
+};

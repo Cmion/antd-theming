@@ -6,6 +6,8 @@ import Header from "./partials/Header";
 import QuickFilter from "./partials/Header/QuickFilter";
 import { clamp } from "lodash";
 import { ColumnProps } from "./types";
+import { Padding } from "./partials/UtilityComponents";
+import { Button } from "antd";
 
 interface DataTableProps {
   columns: ColumnProps[];
@@ -38,7 +40,7 @@ const DataTable = (props: DataTableProps) => {
     data: Array<any>;
     range: { from: number; to: number };
   }>({ data: [], range: { from: 0, to: 15 } });
-  
+
   const [checkState, setCheckedState] = useState({
     checkedList: [],
     indeterminate: true,
@@ -87,38 +89,59 @@ const DataTable = (props: DataTableProps) => {
   useEffect(() => {
     setIsLoadingContent(true);
     const a = setTimeout(() => {
-      setDataSource(prev => ({...prev, data: unpaginatedDataSource.slice(0, 15)}));
-      setIsLoadingContent(false)
+      setDataSource((prev) => ({
+        ...prev,
+        data: unpaginatedDataSource.slice(0, 15),
+      }));
+      setIsLoadingContent(false);
     }, 5000);
 
     return () => clearTimeout(a);
-  },[]);
-  
+  }, []);
+
   return (
-    <div className={"___table-container"}>
-      <Header
-        columns={columns}
-        dataSource={dataSource.data}
-        renderOrder={{ pageRenderOrder, setPageRenderOrder }}
-      />
-      <QuickFilter columns={columns} dataSource={dataSource.data} />
-      <Table
-        setColumns={setColumns}
-        handlePagination={handlePagination}
-        columns={columns}
-        columnKeys={columnKeys}
-        checkState={checkState}
-        dataSource={dataSource.data}
-        defaultColumns={defaultColumns}
-        maxColumns={maxColumns}
-        minColumns={minColumns}
-        onCheckAllChange={onCheckAllChange}
-        onCheckedChange={onCheckedChange}
-        tablePages={tablePages}
-        isLoadingContent={isLoadingContent}
-        useSkeletonLoader={Boolean(useSkeletonLoader)}
-      />
-    </div>
+    <>
+      <Padding vertical={40}>
+        <Button
+          onClick={() => {
+            setIsLoadingContent(true);
+            const a = setTimeout(() => {
+              setDataSource((prev) => ({
+                ...prev,
+                data: unpaginatedDataSource.slice(0, 15),
+              }));
+              setIsLoadingContent(false);
+            }, 5000);
+          }}
+        >
+          Reload
+        </Button>
+      </Padding>
+      <div className={"___table-container"}>
+        <Header
+          columns={columns}
+          dataSource={dataSource.data}
+          renderOrder={{ pageRenderOrder, setPageRenderOrder }}
+        />
+        <QuickFilter columns={columns} dataSource={dataSource.data} />
+        <Table
+          setColumns={setColumns}
+          handlePagination={handlePagination}
+          columns={columns}
+          columnKeys={columnKeys}
+          checkState={checkState}
+          dataSource={dataSource.data}
+          defaultColumns={defaultColumns}
+          maxColumns={maxColumns}
+          minColumns={minColumns}
+          onCheckAllChange={onCheckAllChange}
+          onCheckedChange={onCheckedChange}
+          tablePages={tablePages}
+          isLoadingContent={isLoadingContent}
+          useSkeletonLoader={Boolean(useSkeletonLoader)}
+        />
+      </div>
+    </>
   );
 };
 
@@ -568,6 +591,7 @@ DataTable.defaultProps = {
   ],
   maxColumns: 8,
   minColumns: 4,
+  useSkeletonLoader: true,
 };
 
 export default DataTable;

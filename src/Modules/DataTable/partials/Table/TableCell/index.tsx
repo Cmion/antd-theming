@@ -210,12 +210,12 @@ export default (props: TableCellProps) => {
           checked ? "___table-rows-checked " : "___table-rows"
         } site-collapse-custom-collapse`}
         key={source?.key}
-        initial={{ y: 50 }}
-        animate={{ y: 0 }}
-        exit={{ y: 50 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
         transition={{
           type: 'spring',
-          delay: (index ?? 1) * 0.02 ,
+          delay: (index ?? 1) * 0.04,
           stiffness: 100,
           damping: 13,
         }}

@@ -3,7 +3,7 @@ import TableCell from "../TableCell";
 import React from "react";
 import { TableColumnProps } from "../../../types";
 import { motion } from "framer-motion";
-import { Skeleton, Empty } from "antd";
+import { Skeleton, Empty, Typography } from "antd";
 import { Align } from "../../UtilityComponents";
 import { LoadingOutlined } from "@ant-design/icons";
 
@@ -72,7 +72,7 @@ export default (props: TableBodyProps) => {
             style={{ height: 450 }}
             alignCenter
             justifyCenter
-            children={[<Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />]}
+            children={[<Empty image={Empty.PRESENTED_IMAGE_SIMPLE}         description={<Typography.Text>No data to display here!.</Typography.Text>} />]}
           />
         </motion.td>
       )}
