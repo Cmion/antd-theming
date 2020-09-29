@@ -71,7 +71,7 @@ export default (props) => {
                                 Table
                             </Menu.Item>
                             <Menu.Item key="/" icon={<BarChartOutlined/>}>
-                                Components
+                                Trips
                             </Menu.Item>
                             <Menu.Item key="12" icon={<CloudOutlined/>}>
                                 nav 5
