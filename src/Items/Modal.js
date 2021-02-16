@@ -1,10 +1,11 @@
 import React from "react";
-import { Modal, Button, Space, Typography, message } from "antd";
-import ambient from '../sound/Alerts/notification_ambient.wav';
-import highIntensity from '../sound/Alerts/notification_high-intensity.wav';
-import errorSound from '../sound/Secondary/alert_error-01.wav';
+import { Modal, Button, Space, Typography, message, Select } from "antd";
+import ambient from "../sound/Alerts/notification_ambient.wav";
+import highIntensity from "../sound/Alerts/notification_high-intensity.wav";
+import errorSound from "../sound/Secondary/alert_error-01.wav";
 
 const key = "updatable";
+const {Option} = Select
 
 const openMessage = () => {
   message.loading({ content: "Loading...", key });
@@ -13,7 +14,7 @@ const openMessage = () => {
   }, 1000);
 };
 const Messagesuccess = () => {
-  message.success("This is a success message");
+  message.success("This is a success message", 60);
   const audio = new Audio(highIntensity);
   audio.play();
 };
@@ -140,6 +141,20 @@ export default () => (
         <Button onClick={Messageerror}>Error</Button>
         <Button onClick={Messagewarning}>Warning</Button>
       </Space>
+    </Space>
+    <Space>
+      <Select
+        defaultValue="lucy"
+        style={{ width: 120 }}
+        onChange={() => null}
+      >
+        <Option value="jack">Jack</Option>
+        <Option value="lucy">Lucy</Option>
+        <Option value="disabled" disabled>
+          Disabled
+        </Option>
+        <Option value="Yiminghe">yiminghe</Option>
+      </Select>
     </Space>
   </Space>
 );

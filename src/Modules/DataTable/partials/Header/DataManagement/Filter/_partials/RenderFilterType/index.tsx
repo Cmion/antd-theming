@@ -55,7 +55,7 @@ export default (props: RenderFilterTypeProps) => {
             defaultValue={0}
             value={isNumber(value?.start) ? value?.start : 0}
             style={{ width: "45%" }}
-            onChange={(num) => handleFilterValueChange(num, "range", "end")}
+            onChange={(num) => handleFilterValueChange(num ?? undefined, "range", "end")}
           />
         )}
         <SuffixStatement />
@@ -76,7 +76,7 @@ export default (props: RenderFilterTypeProps) => {
             defaultValue={0}
             style={{ width: "45%" }}
             value={isNumber(value?.end) ? value?.end : 0}
-            onChange={(num) => handleFilterValueChange(num, "range", "end")}
+            onChange={(num) => handleFilterValueChange(num ?? undefined, "range", "end")}
           />
         )}
       </Align>
@@ -89,7 +89,7 @@ export default (props: RenderFilterTypeProps) => {
           defaultValue={0}
           value={isNumber(value) ? value : 0}
           style={{ width: "100%" }}
-          onChange={(num) => handleFilterValueChange(num)}
+          onChange={(num) => handleFilterValueChange(num ?? undefined)}
         />
       );
     case "date":

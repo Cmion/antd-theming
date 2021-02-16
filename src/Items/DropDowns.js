@@ -35,7 +35,7 @@ export default () => (
   <Space size={16} direction={"vertical"}>
     <Title level={3}>Dropdown</Title>
     <Space>
-      <Dropdown overlay={menu} placement="bottomLeft" arrow>
+      <Dropdown overlay={menu} placement="bottomLeft" arrow trigger={'click'}>
         <Button>bottomLeft</Button>
       </Dropdown>
       <Dropdown overlay={menu} placement="bottomCenter" arrow>
@@ -45,7 +45,7 @@ export default () => (
         <Button>bottomRight</Button>
       </Dropdown>
       <br />
-      <Dropdown overlay={menu} placement="topLeft" arrow>
+      <Dropdown overlay={menu} placement="topLeft" arrow trigger={'click'}>
         <Button>topLeft</Button>
       </Dropdown>
       <Dropdown overlay={menu} placement="topCenter" arrow>

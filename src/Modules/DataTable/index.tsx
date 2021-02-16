@@ -101,7 +101,7 @@ const DataTable = (props: DataTableProps) => {
 
   return (
     <>
-      <Padding vertical={40}>
+      <Padding vertical={40} horizontal={20}>
         <Button
           onClick={() => {
             setIsLoadingContent(true);

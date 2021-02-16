@@ -1,5 +1,5 @@
-import React from 'react';
-import {BackTop, Space, Layout} from "antd";
+import React from "react";
+import { BackTop, Space, Layout } from "antd";
 import DropDowns from "../../Items/DropDowns";
 import Btn from "../../Items/Btn";
 import Tags from "../../Items/Tags";
@@ -15,26 +15,33 @@ import Modal from "../../Items/Modal";
 import Notify from "../../Items/Notify";
 import PopConfirm from "../../Items/PopConfirm";
 import Collapsible from "../../Items/Collapsible";
+import Table from "../../Items/Table";
+import Slider from "../../Items/Slider";
 
-const {Content} = Layout;
+const { Content } = Layout;
 export default () => {
-    return <Content>
-        <Space direction={"vertical"} size={32}>
-            <DropDowns/>
-            <Btn/>
-            <Tags/>
-            <Steps/>
-            <Check/>
-            <Radio/>
-            <DatePicker/>
-            <Forms/>
-            <Upload/>
-            <POver/>
-            <Drawer/>
-            <Modal/>
-            <Notify/>
-            <PopConfirm/>
-            <Collapsible/>
-            <BackTop/>
-        </Space></Content>
-}
+  return (
+    <Content>
+      <Space direction={"vertical"} size={32} style={{ padding: 20 }}>
+        <Table />
+        <Slider />
+        <DropDowns />
+        <Btn />
+        <Tags />
+        <Steps />
+        <Check />
+        <Radio />
+        <DatePicker />
+        <Forms />
+        <Upload />
+        <POver />
+        <Drawer />
+        <Modal />
+        <Notify />
+        <PopConfirm />
+        <Collapsible />
+        <BackTop />
+      </Space>
+    </Content>
+  );
+};

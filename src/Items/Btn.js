@@ -6,7 +6,7 @@ import { DownloadOutlined } from "@ant-design/icons";
 const { Title } = Typography;
 export default class ButtonSize extends React.Component {
   state = {
-    size: "large",
+    size: "default",
   };
 
   handleSizeChange = (e) => {
@@ -18,7 +18,7 @@ export default class ButtonSize extends React.Component {
     return (
       <Space size={16} direction={"vertical"}>
         <Title level={3}>Buttons</Title>
-        <Space>
+        <Space align={"center"} wrap>
           <Radio.Group value={size} onChange={this.handleSizeChange}>
             <Radio.Button value="large">Large</Radio.Button>
             <Radio.Button value="default">Default</Radio.Button>
@@ -26,6 +26,19 @@ export default class ButtonSize extends React.Component {
           </Radio.Group>
           <br />
           <br />
+          <Button type="primary" danger>
+            Primary
+          </Button>
+          <Button danger>Default</Button>
+          <Button type="dashed" danger>
+            Dashed
+          </Button>
+          <Button type="text" danger>
+            Text
+          </Button>
+          <Button type="link" danger>
+            Link
+          </Button>
           <Button type="primary" size={size}>
             Primary
           </Button>

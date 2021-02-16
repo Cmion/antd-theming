@@ -14,6 +14,7 @@ const openNotification = (placement) => {
     description:
       "This is the content of the notification. This is the content of the notification. This is the content of the notification.",
     placement,
+    duration: 400
   });
 };
 
