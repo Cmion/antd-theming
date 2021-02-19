@@ -7,7 +7,6 @@ import {
   NumberOutlined,
   UploadOutlined,
   BarChartOutlined,
-  AppstoreOutlined,
   NotificationOutlined,
   LaptopOutlined,
   CloudOutlined,
@@ -76,7 +75,7 @@ export default (props) => {
                 <Menu.Item key="/calendar" icon={<CloudOutlined />}>
                   Calendar
                 </Menu.Item>
-                <Menu.Item key="/desc" icon={<AppstoreOutlined />}>
+                <Menu.Item key="/desc" icon={<NotificationOutlined />}>
                  Description
                 </Menu.Item>
                 <Menu.Item key="/images" icon={<TeamOutlined />}>

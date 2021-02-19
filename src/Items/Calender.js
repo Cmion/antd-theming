@@ -1,4 +1,4 @@
-import { Calendar, Layout } from "antd";
+import { Calendar, Layout, Space, Switch } from "antd";
 import React from "react";
 
 function onPanelChange(value, mode) {
@@ -7,9 +7,17 @@ function onPanelChange(value, mode) {
 const { Content } = Layout;
 
 const Main = () => {
+  let onChange = () => null;
   return (
     <Content style={{ padding: 20 }}>
-      <Calendar onPanelChange={onPanelChange} />
+      <Space direction="vertical">
+        <Switch defaultChecked onChange={onChange} />
+        <Switch defaultChecked onChange={onChange} />
+        <div style={{ width: 320, minHeight: 300 }}>
+          <Calendar fullscreen={false} onPanelChange={onPanelChange} />
+        </div>
+        <Calendar onPanelChange={onPanelChange} />
+      </Space>
     </Content>
   );
 };

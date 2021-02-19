@@ -9,6 +9,7 @@ import {
   PageHeader,
   message,
 } from "antd";
+import '@voomsway/react-table/dist/index.css'
 import "./custom-theme.css";
 import "react-perfect-scrollbar/dist/css/styles.css";
 import 'remixicon/fonts/remixicon.css';

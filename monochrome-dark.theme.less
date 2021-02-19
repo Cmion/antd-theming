@@ -10,14 +10,14 @@
   --accent: rgb(255, 255, 255);
   --accent35: rgba(255, 255, 255, 0.35);
   --accent2: rgba(255, 255, 255, 0.2);
-  --border: darken(#535356, 15%);
+  --border: darken(#535356, 12%);
   --foreground: #27282c;
   --background-primary: #27282c;
   --background-secondary: #27282c;
   --border-color-base: #535356; // base border outline a component
   --border-color-split: lighten(#535356, 3%);
   --table-border-color: #535356;
-  --picker-cell-color: rgba(212, 212, 213);
+  --picker-cell-color: rgb(212, 212, 213);
   --picker-bg: var(--background-primary);
   --picker-basic-cell-active-with-range-color: lighten(@primary-color, 5%);
   --picker-basic-cell-hover-with-range-color: lighten(@primary-color, 15%);
@@ -95,6 +95,9 @@
   --popover-arrow-border: var(--border-color-base);
   --notification-notice-close: var(--text-color-secondary);
   --notification-notice-close-hover: var(--text-color);
+
+  --table-header-border: var(--border);
+  --table-cell-fixed-shadow: rgba(255, 255, 255, 0.2);
 }
 
 &-notice {
@@ -237,6 +240,7 @@
 
 //@divider-color: var(--divider-color);
 
+@custom-secondary-color: #3d3d41;
 .ant-picker-time-panel-column
   > li.ant-picker-time-panel-cell-selected
   .ant-picker-time-panel-cell-inner {
@@ -261,17 +265,213 @@
   background: var(--text-color-secondary) !important;
 }
 .ant-tag-blue {
-  color: #3e82ff !important;
-  background: tint(#3e82ff, 90%) !important;
-  border-color: tint(#3e82ff, 70%) !important;
+  color: #3e82ff;
+  background: tint(#3e82ff, 90%);
+  border-color: tint(#3e82ff, 70%);
 }
 .ant-table-thead > tr > th {
-  background-color: var(--background-secondary);
-  border: 1px solid var(--border-color-split) !important;
+  background-color: #3d3d41 !important;
+  // border: 1px solid var(--border-color-split) !important;
 }
-.ant-table-tbody > tr > td {
-  border: 1px solid var(--border-color-split) !important;
-}
-.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-icon .ant-steps-icon {
+.ant-steps-item-process
+  > .ant-steps-item-container
+  > .ant-steps-item-icon
+  .ant-steps-icon {
   color: #000 !important;
+}
+
+.ant-steps-item-process.ant-steps-item-custom
+  > .ant-steps-item-container
+  > .ant-steps-item-icon
+  .ant-steps-icon {
+  color: #fff !important;
+}
+.ReactTable___table-header-cell.table-header-cell-fixed-right {
+  border-right: 0 !important;
+}
+.ReactTable___table-body-cell.table-body-cell-fixed-right {
+  border-right: 1.3px solid var(--border) !important;
+  right: 0;
+}
+
+.ReactTable___table-header-cell.table-header-cell-fixed-right,
+.ReactTable___table-header-cell,
+.ReactTable___table-header-cell.table-header-cell-fixed-left {
+  background: #3d3d41 !important;
+}
+.ant-picker-cell-in-view.ant-picker-cell-selected.ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-start.ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-end.ant-picker-cell-inner {
+  color: rgba(0, 0, 0) !important;
+}
+.ant-picker-cell-in-view.ant-picker-cell-in-range {
+  position: relative;
+  color: rgba(0, 0, 0) !important;
+}
+
+.ant-picker-cell:hover:not(.ant-picker-cell-in-view) .ant-picker-cell-inner,
+.ant-picker-cell:hover:not(.ant-picker-cell-selected):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end):not(.ant-picker-cell-range-hover-start):not(.ant-picker-cell-range-hover-end)
+  .ant-picker-cell-inner {
+  color: rgba(0, 0, 0) !important;
+}
+.ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner {
+  color: rgba(0, 0, 0) !important;
+}
+.ant-picker-time-panel-column
+  > li.ant-picker-time-panel-cell
+  .ant-picker-time-panel-cell-inner:hover {
+  color: rgba(0, 0, 0) !important;
+}
+.ant-picker-week-panel-row:hover td {
+  color: rgba(0, 0, 0) !important;
+}
+.ant-select-item:hover:not(.ant-select-item-option-selected):not(.ant-select-item-option-disabled),
+.ant-select-item-option-active:not(.ant-select-item-option-selected):not(.ant-select-item-option-disabled) {
+  color: rgba(0, 0, 0) !important;
+}
+.ant-select-item-option-selected:hover:not(.ant-select-item-option-disabled) {
+  color: @primary-color !important;
+}
+.ant-select-item-option-disabled,
+.ant-select-item-option-disabled:hover {
+  color: var(--disabled-color) !important;
+}
+.ant-checkbox-checked .ant-checkbox-inner:after {
+  position: absolute;
+  display: table;
+  border: 2px solid #000;
+  border-top: 0;
+  border-left: 0;
+  transform: rotate(45deg) scale(1) translate(-50%, -50%);
+  opacity: 1;
+  transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  content: " ";
+}
+.ant-slider-rail {
+  background-color: @custom-secondary-color;
+}
+.ant-slider:hover .ant-slider-rail {
+  background-color: var(--border-color-split);
+}
+.ant-table-tbody > tr.ant-table-row:hover > td {
+  background: @custom-secondary-color !important;
+}
+
+.ant-table-filter-trigger-container-open,
+.ant-table-filter-trigger {
+  color: var(--text-color) !important;
+  background-color: @custom-secondary-color !important;
+}
+.ant-table-filter-trigger:hover {
+  color: var(--accent) !important;
+  background-color: var(--background-primary) !important;
+}
+.ant-dropdown-menu-item:hover,
+.ant-dropdown-menu-submenu-title:hover {
+  color: rgba(0, 0, 0) !important;
+}
+
+.ant-dropdown-menu-item-selected,
+.ant-dropdown-menu-submenu-title-selected,
+.ant-dropdown-menu-item-selected > a,
+.ant-dropdown-menu-submenu-title-selected > a {
+  color: #000000;
+}
+.ant-menu-submenu-arrow:after,
+.ant-menu-submenu-inline
+  > .ant-menu-submenu-title:hover
+  .ant-menu-submenu-arrow:before,
+.ant-menu-submenu-vertical-left
+  > .ant-menu-submenu-title:hover
+  .ant-menu-submenu-arrow:after,
+.ant-menu-submenu-vertical-left
+  > .ant-menu-submenu-title:hover
+  .ant-menu-submenu-arrow:before,
+.ant-menu-submenu-vertical-right
+  > .ant-menu-submenu-title:hover
+  .ant-menu-submenu-arrow:after,
+.ant-menu-submenu-vertical-right
+  > .ant-menu-submenu-title:hover
+  .ant-menu-submenu-arrow:before,
+.ant-menu-submenu-vertical
+  > .ant-menu-submenu-title:hover
+  .ant-menu-submenu-arrow:after,
+.ant-menu-submenu-vertical
+  > .ant-menu-submenu-title:hover
+  .ant-menu-submenu-arrow:before {
+  background: linear-gradient(90deg, var(--text-color-inverse), var(--text-color-inverse));
+}
+
+.ant-menu-submenu-inline
+  > .ant-menu-submenu-title:hover
+  .ant-menu-submenu-arrow:after,
+.ant-menu-submenu-inline
+  > .ant-menu-submenu-title:hover
+  .ant-menu-submenu-arrow:before,
+.ant-menu-submenu-vertical-left
+  > .ant-menu-submenu-title:hover
+  .ant-menu-submenu-arrow:after,
+.ant-menu-submenu-vertical-left
+  > .ant-menu-submenu-title:hover
+  .ant-menu-submenu-arrow:before,
+.ant-menu-submenu-vertical-right
+  > .ant-menu-submenu-title:hover
+  .ant-menu-submenu-arrow:after,
+.ant-menu-submenu-vertical-right
+  > .ant-menu-submenu-title:hover
+  .ant-menu-submenu-arrow:before,
+.ant-menu-submenu-vertical
+  > .ant-menu-submenu-title:hover
+  .ant-menu-submenu-arrow:after,
+.ant-menu-submenu-vertical
+  > .ant-menu-submenu-title:hover
+  .ant-menu-submenu-arrow:before {
+  background: linear-gradient(90deg, var(--text-color-inverse), var(--text-color-inverse));
+}
+.ReactTable__table-selectable-header-popover .ant-popover-inner-content {
+  border: 1.3px solid var(--border-color-split) !important;
+  border-radius: 4px;
+}
+
+.ReactTable__table-selectable-header-popover .ant-popover-arrow {
+  border-top-color: var(--popover-arrow-border) !important;
+  border-left-color: var(--popover-arrow-border) !important;
+}
+.ant-alert-success,
+.ant-alert-info,
+.ant-alert-error,
+.ant-alert-warning {
+  // background-color: @custom-secondary-color;
+  background-color: var(--background-primary);
+}
+
+.ant-progress-inner {
+  background-color: @custom-secondary-color;
+}
+.ant-switch {
+  background-color: @custom-secondary-color;
+}
+.ant-switch-checked {
+  background-color: #ffffff;
+}
+.ant-dropdown-menu-item > a:hover,
+.ant-dropdown-menu-submenu-title > a:hover {
+  color: rgb(0, 0, 0) !important;
+}
+.ant-menu-item-selected a,
+.ant-menu-item-selected a:hover {
+  color: rgb(0, 0, 0) !important;
+}
+.ReactTable___table-selectable-header-cell-child-container.header-refresh-control {
+  background-color: @custom-secondary-color !important;
+}
+.ant-menu-item:hover,
+.ant-menu-item-active,
+.ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
+.ant-menu-submenu-active,
+.ant-menu-submenu-title:hover {
+  color: var(--text-color-inverse);
+  background: var(--accent);
 }

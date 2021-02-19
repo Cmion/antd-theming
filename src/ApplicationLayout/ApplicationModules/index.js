@@ -4,7 +4,6 @@ import {
     ShopOutlined,
     LogoutOutlined,
     TeamOutlined,
-    AppstoreOutlined,
     MenuOutlined,
     UserOutlined,
     VideoCameraOutlined,
@@ -112,7 +111,7 @@ export default (props) => {
                     </Menu.Item>
                     <Menu.Item
                         key="6"
-                        icon={<AppstoreOutlined className={"sider-icon"}/>}
+                        icon={<BulbOutlined className={"sider-icon"}/>}
                     >
                         nav 6
                     </Menu.Item>

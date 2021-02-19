@@ -17,12 +17,15 @@ import PopConfirm from "../../Items/PopConfirm";
 import Collapsible from "../../Items/Collapsible";
 import Table from "../../Items/Table";
 import Slider from "../../Items/Slider";
+import TTip from "../../Items/TTip";
+import Alerts from "../../Items/Alerts";
 
 const { Content } = Layout;
 export default () => {
   return (
     <Content>
       <Space direction={"vertical"} size={32} style={{ padding: 20 }}>
+        <Alerts />
         <Table />
         <Slider />
         <DropDowns />
@@ -39,6 +42,7 @@ export default () => {
         <Modal />
         <Notify />
         <PopConfirm />
+        <TTip />
         <Collapsible />
         <BackTop />
       </Space>
