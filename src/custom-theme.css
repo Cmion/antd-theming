@@ -24838,13 +24838,13 @@ div.ant-typography-edit-content.ant-typography-rtl {
   --accent: #ffffff;
   --accent35: rgba(255, 255, 255, 0.35);
   --accent2: rgba(255, 255, 255, 0.2);
-  --border: #353537;
-  --foreground: #27282c;
-  --background-primary: #27282c;
-  --background-secondary: #27282c;
-  --border-color-base: #535356;
-  --border-color-split: #5b5b5e;
-  --table-border-color: #535356;
+  --border: #111111;
+  --foreground: #121212;
+  --background-primary: #121212;
+  --background-secondary: #474747;
+  --border-color-base: #303030;
+  --border-color-split: #383838;
+  --table-border-color: #303030;
   --picker-cell-color: #d4d4d5;
   --picker-bg: var(--background-primary);
   --picker-basic-cell-active-with-range-color: #ffffff;
@@ -24890,7 +24890,7 @@ div.ant-typography-edit-content.ant-typography-rtl {
   --scroll-bg: var(--border-color-base);
   --btn-default-color: var(--text-color);
   --skeleton-color: #d4d4d5;
-  --skeleton-to-color: #25262a;
+  --skeleton-to-color: #111111;
   --divider-color: rgba(212, 212, 213, 0.06);
   --checkbox-color: var(--accent);
   --input-number-handler-border-color: var(--border-color-base);
@@ -25030,7 +25030,7 @@ div.ant-typography-edit-content.ant-typography-rtl {
 .ant-menu-submenu-vertical-right > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow:before,
 .ant-menu-submenu-vertical > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow:after,
 .ant-menu-submenu-vertical > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow:before {
-  background: linear-gradient(90deg, var(--text-color-inverse), var(--text-color-inverse));
+  background: linear-gradient(90deg, var(--text-color), var(--text-color));
 }
 .ant-menu-submenu-inline > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow:after,
 .ant-menu-submenu-inline > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow:before,
@@ -25040,7 +25040,7 @@ div.ant-typography-edit-content.ant-typography-rtl {
 .ant-menu-submenu-vertical-right > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow:before,
 .ant-menu-submenu-vertical > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow:after,
 .ant-menu-submenu-vertical > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow:before {
-  background: linear-gradient(90deg, var(--text-color-inverse), var(--text-color-inverse));
+  background: linear-gradient(90deg, var(--text-color), var(--text-color));
 }
 .ReactTable__table-selectable-header-popover .ant-popover-inner-content {
   border: 1.3px solid var(--border-color-split) !important;
@@ -25081,6 +25081,6 @@ div.ant-typography-edit-content.ant-typography-rtl {
 .ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
 .ant-menu-submenu-active,
 .ant-menu-submenu-title:hover {
-  color: var(--text-color-inverse);
-  background: var(--accent);
+  color: var(--text-color);
+  background: var(--background-secondary);
 }
