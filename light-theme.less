@@ -18,6 +18,10 @@
   --border-color-base: hsv(0, 0, 85%); // base border outline a component
   --border-color-split: hsv(0, 0, 94%);
   --table-border-color: lighten(hsv(0, 0, 94%), 80%);
+  // React-table
+  --content-header-background: rgba(255, 255, 255, 0.5);
+  --table-cell-fixed-shadow: rgba(32, 41, 50, 0.15);
+  // Stopped
   --picker-cell-color: rgba(0, 0, 0, 0.25);
   --picker-bg: var(--background-primary);
   --picker-basic-cell-active-with-range-color: @primary-1;
@@ -52,6 +56,7 @@
     --background-secondary
   ); // Default grey background color
   --disabled-bg: var(--background-color-base);
+  --disabled-bg-dark: darken(rgba(247, 248, 250, 1), 10%);
   --disabled-color-dark: fade(#fff, 35%);
   // Radio
   --radio-disabled-button-checked-bg: tint(@black, 90%);

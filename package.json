@@ -13,7 +13,7 @@
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
     "@voomsway/react-table": "1.0.0-beta.60",
-    "antd": "^4.12.3",
+    "antd": "^4.15.0",
     "antd-img-crop": "^3.9.0",
     "array-move": "^3.0.1",
     "eslint-config-prettier": "^6.11.0",
