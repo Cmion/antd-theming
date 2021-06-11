@@ -13,7 +13,7 @@
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
     "@voomsway/react-table": "1.0.0-beta.60",
-    "antd": "^4.15.0",
+    "antd": "^4.16.2",
     "antd-img-crop": "^3.9.0",
     "array-move": "^3.0.1",
     "eslint-config-prettier": "^6.11.0",
@@ -38,7 +38,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "compile-dark": "lessc --js stm-dark.less stm-dark.css && lessc --js stm.less stm-light.css && node compact.js && lessc --js stm-compact.less stm-compact.css && cleancss -o stm-compact.min.css stm-compact.css",
+    "compile-light": "lessc --js -x stm-dark.less stm-dark.css"
   },
   "eslintConfig": {
     "extends": "react-app"

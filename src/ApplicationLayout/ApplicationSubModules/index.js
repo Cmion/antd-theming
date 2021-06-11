@@ -3,15 +3,15 @@ import { motion } from "framer-motion";
 import { Layout, Menu } from "antd";
 import Scrollbar from "react-perfect-scrollbar";
 import {
-  UserOutlined,
-  NumberOutlined,
-  UploadOutlined,
   BarChartOutlined,
-  NotificationOutlined,
-  LaptopOutlined,
   CloudOutlined,
-  TeamOutlined,
+  LaptopOutlined,
+  NotificationOutlined,
+  NumberOutlined,
   ShopOutlined,
+  TeamOutlined,
+  UploadOutlined,
+  UserOutlined
 } from "@ant-design/icons";
 import { navigate } from "@reach/router";
 
@@ -53,7 +53,7 @@ export default (props) => {
             <Menu
               theme="light"
               mode="inline"
-              defaultSelectedKeys={["10"]}
+              defaultSelectedKeys={["/"]}
               style={{ height: "calc(100vh - 64px)", border: 0 }}
               onSelect={({ key }) => {
                 navigate(key);
@@ -70,7 +70,7 @@ export default (props) => {
                   Table
                 </Menu.Item>
                 <Menu.Item key="/" icon={<BarChartOutlined />}>
-                  Trips
+                  Components
                 </Menu.Item>
                 <Menu.Item key="/calendar" icon={<CloudOutlined />}>
                   Calendar

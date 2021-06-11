@@ -1,34 +1,18 @@
 import React from "react";
-import {
-  Breadcrumb,
-  Button,
-  Space,
-  Badge,
-  Avatar,
-  Input,
-  PageHeader,
-  message,
-} from "antd";
-import '@voomsway/react-table/dist/index.css'
+import { Avatar, Badge, Button, Input, Layout, message, Space } from "antd";
+// import '@voomsway/react-table/dist/index.css'
 import "./custom-theme.css";
 import "react-perfect-scrollbar/dist/css/styles.css";
-import 'remixicon/fonts/remixicon.css';
+import "remixicon/fonts/remixicon.css";
 import "./App.css";
-import Scrollbar from "react-perfect-scrollbar";
-import { Layout, Menu } from "antd";
-import {
-  PlusOutlined,
-  SearchOutlined,
-  NotificationOutlined,
-} from "@ant-design/icons";
-import { motion } from "framer-motion";
 import ScrollBar from "react-perfect-scrollbar";
-import {ambientTheme, defaultTheme} from "./themes";
-import ApplicationModules from './ApplicationLayout/ApplicationModules';
-import ApplicationSubModules from './ApplicationLayout/ApplicationSubModules';
-import ContentHeader from './ApplicationLayout/ContentHeader';
-import PageContent from './ApplicationLayout/PageContent';
-import Modules from './Modules';
+import { NotificationOutlined, PlusOutlined, SearchOutlined } from "@ant-design/icons";
+import { ambientTheme, defaultTheme } from "./themes";
+import ApplicationModules from "./ApplicationLayout/ApplicationModules";
+import ApplicationSubModules from "./ApplicationLayout/ApplicationSubModules";
+import ContentHeader from "./ApplicationLayout/ContentHeader";
+import PageContent from "./ApplicationLayout/PageContent";
+import Modules from "./Modules";
 // import './example.less';
 
 const { Header, Content, Footer, Sider } = Layout;

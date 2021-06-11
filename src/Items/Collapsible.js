@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import { Collapse, Space, Typography } from 'antd';
+import { Collapse, Space, Typography } from "antd";
 
 const { Panel } = Collapse;
 
@@ -15,9 +15,9 @@ const text = `
 `;
 
 export default () => (
-    <Space direction={'vertical'} align={16}>
+    <Space direction={'vertical'}>
         <Typography.Title level={3}>Collapse</Typography.Title>
-    <Collapse defaultActiveKey={['1']} onChange={callback}>
+    <Collapse defaultActiveKey={['1']} onChange={callback} >
         <Panel header="This is panel header 1" key="1">
             <p>{text}</p>
         </Panel>
