@@ -4,7 +4,7 @@ import { Avatar, Badge, Button, Input, Layout, message, Space } from "antd";
 import "./custom-theme.css";
 import "react-perfect-scrollbar/dist/css/styles.css";
 import "remixicon/fonts/remixicon.css";
-import "./App.css";
+// import "./App.css";
 import ScrollBar from "react-perfect-scrollbar";
 import { NotificationOutlined, PlusOutlined, SearchOutlined } from "@ant-design/icons";
 import { ambientTheme, defaultTheme } from "./themes";

@@ -40,7 +40,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "compile-dark": "lessc --js stm-dark.less stm-dark.css && lessc --js stm.less stm-light.css && node compact.js && lessc --js stm-compact.less stm-compact.css && cleancss -o stm-compact.min.css stm-compact.css",
-    "compile-light": "lessc --js -x stm-dark.less stm-dark.css"
+    "compile-stm": "lessc --js stm-dark.less src/custom-theme.css"
   },
   "eslintConfig": {
     "extends": "react-app"
